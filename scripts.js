@@ -31,11 +31,16 @@ incrementBtn.addEventListener('click', (e) => {
 
 class Counter {
 	constructor(element) {
+		// Set initial state
 		this.element = element
 		this.count = 0
+
+		// Get DOM Elements
 		this.decrementBtn = element.querySelector('.decrement')
 		this.incrementBtn = element.querySelector('.increment')
 		this.countSpan = element.querySelector('.count')
+
+		// Add event listeners
 		this.addEventListeners()
 	}
 
@@ -52,13 +57,12 @@ class Counter {
 	}
 
 	increment() {
-		this.count++
-		this.countSpan.textContent = this.count
+		this.countSpan.textContent = ++this.count
 	}
 
 	decrement() {
 		this.count--
-		this.countSpan.textContent = this.count
+		this.countSpan.textContent = ++this.count
 	}
 }
 
